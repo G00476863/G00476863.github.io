@@ -1,0 +1,255 @@
+:root {
+    --dark: #0b0f14;
+    --card: #121821;
+    --text: #e6edf3;
+    --muted: #9aa4ad;
+    --emerald: #00ff9c;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #0b0f14, #05080c);
+    color: var(--text);
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo strong {
+    color: var(--emerald);
+}
+
+.nav-links a {
+    color: var(--text);
+    margin-left: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--emerald);
+}
+
+.active {
+    color: var(--emerald);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 1.2rem;
+}
+
+/* HERO IMAGE */
+.hero img {
+    margin-top: 40px;
+    width: 280px;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 60px;
+}
+
+/* CARDS */
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.card p {
+    color: var(--muted);
+}
+
+/* IMAGE SECTIONS */
+.image-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.image-section img {
+    width: 85%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+    transition: 0.3s;
+}
+
+.image-section img:hover {
+    transform: scale(1.03);
+}
+
+/* APP IMAGE */
+.app-image {
+    width: 300px !important;
+    margin-top: 20px;
+}
+
+/* FLOW */
+.flow {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.flow-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.step {
+    background: var(--card);
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.arrow {
+    font-size: 22px;
+    color: var(--emerald);
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    margin: 10px;
+}
+
+.stat h2 {
+    font-size: 2.5rem;
+    color: var(--emerald);
+}
+
+/* HEADER */
+.content-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.content-header p {
+    color: var(--muted);
+}
+
+/* LIVE MAP (FIXED - NOW OUTSIDE MEDIA QUERY) */
+.live-map {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.live-map p {
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.location {
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.location:hover {
+    transform: translateY(-5px);
+}
+
+/* STATUS COLORS */
+.available {
+    border-left: 5px solid #00ff9c;
+}
+
+.medium {
+    border-left: 5px solid #ffc107;
+}
+
+.busy {
+    border-left: 5px solid #ff4d4d;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #000;
+    margin-top: 40px;
+    color: var(--muted);
+}
+
+/* RESPONSIVE (FIXED PROPERLY) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .grid {
+        padding: 30px;
+    }
+
+    .map-grid {
+        padding: 0 20px;
+    }
+}

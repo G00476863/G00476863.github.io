@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSensor Ireland | IoT Urban Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Added internal animation styles (you can move to CSS later) -->
+    <style>
+        /* HERO IMAGE UPGRADE */
+        .hero img {
+            width: 420px;
+            max-width: 90%;
+            margin-top: 25px;
+            transform: scale(1.05);
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
+        }
+
+        /* LIVE MAP LOOK */
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .location {
+            padding: 20px;
+            border-radius: 14px;
+            background: #111;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .location:hover {
+            transform: translateY(-4px);
+        }
+
+        /* STATUS COLORS */
+        .available { box-shadow: 0 0 15px rgba(0,255,120,0.15); }
+        .busy { box-shadow: 0 0 15px rgba(255,50,50,0.15); }
+        .medium { box-shadow: 0 0 15px rgba(255,200,0,0.15); }
+
+        /* PULSING LIVE DOT */
+        .live-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #00ff88;
+            margin-right: 8px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.6); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* NUMBER ANIMATION */
+        .count {
+            font-weight: bold;
+            font-size: 18px;
+            animation: pop 0.6s ease;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">PARKSENSOR <strong>IRELAND</strong></div>
+    <div class="nav-links">
+        <a href="index.html" class="active">Solutions</a>
+        <a href="tech.html">Technology</a>
+        <a href="impact.html">Regional Impact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Intelligence Beneath the Surface.</h1>
+        <p>Real-time parking intelligence for Ireland’s cities.</p>
+
+        <!-- BIGGER SENSOR IMAGE -->
+        <img src="images/ParkSensor.png" alt="ParkSensor device">
+    </div>
+</section>
+
+<!-- LIVE MAP SECTION -->
+<section class="live-map">
+    <h2><span class="live-dot"></span>Live Parking Availability (Galway)</h2>
+    <p>Simulated real-time data powered by ParkSensor Ireland</p>
+
+    <div class="map-grid">
+
+        <div class="location available">
+            <h3>Salthill Promenade</h3>
+            <p>🟢 <span class="count">42</span> Spaces Available</p>
+        </div>
+
+        <div class="location busy">
+            <h3>ATU Galway</h3>
+            <p>🔴 FULL</p>
+        </div>
+
+        <div class="location medium">
+            <h3>Wellpark Retail</h3>
+            <p>🟡 <span class="count">18</span> Spaces Available</p>
+        </div>
+
+        <div class="location available">
+            <h3>Galway City Centre</h3>
+            <p>🟢 <span class="count">25</span> Spaces Available</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- TECH GRID -->
+<section class="grid">
+    <div class="card">
+        <h2>LoRaWAN Connectivity</h2>
+        <p>Long-range, low-power communication across urban environments.</p>
+    </div>
+
+    <div class="card">
+        <h2>IP68 Durability</h2>
+        <p>Fully waterproof and built for Irish weather conditions.</p>
+    </div>
+
+    <div class="card">
+        <h2>Smart Detection</h2>
+        <p>Accurate real-time parking detection using dual sensors.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 ParkSensor Ireland</p>
+</footer>
+
+</body>
+</html>
